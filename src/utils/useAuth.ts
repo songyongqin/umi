@@ -1,8 +1,11 @@
 
 const useAuth = () => {
-  let obj = {isLogin:true}
-  if(2>1) {
-    return obj
+  let obj = {isLogin:false}
+  let flag = localStorage.getItem("isLogin")
+  if(flag === "true") {
+    obj = {isLogin:true}
+  } else {
+    obj = {isLogin:false}
   }
   return obj
 };
