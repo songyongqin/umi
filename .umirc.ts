@@ -5,12 +5,16 @@ export default defineConfig({
     type: 'none',
   },
   layout:false,
-  base: '/docs/',
+  // mock:false,
+  base: '/',
   publicPath: '/static/',
   hash: true,
   history: {
     type: 'hash',
   },
+  // dynamicImport: {
+  //   loading: '@/components/loading',
+  // },
   // proxy: {
   //   '/api': {
   //     'target': 'http://jsonplaceholder.typicode.com/',
