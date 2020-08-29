@@ -1,0 +1,8 @@
+{
+  "title": "捕风蜜罐系统",
+  "routerHiden": [],
+  "adminHiden": [],
+  "operatorHiden": [],
+  "commonHiden": ["/config-manage/user"],
+  "globalRoutes": ["/login"]
+}

@@ -1,39 +1,32 @@
-import React,{useState,useEffect} from 'react';
-import {Button} from 'antd'
+import React, { useState, useEffect } from 'react';
+import { Button } from 'antd';
 import request from '@/utils/request';
+import { history } from 'umi';
 
 const User = () => {
-
   const getData = () => {
     request
-    .get('/api/user')
-    .then(function(response) {
-      console.log(response);
-    })
-    .catch(function(error) {
-      console.log(error);
-    });
-  }
+      .get('/api/user')
+      .then(function(response) {})
+      .catch(function(error) {
+        console.log(error);
+      });
+  };
 
   useEffect(() => {
-    getData()
-  }, [])
+    getData();
+  }, []);
+
+  const toMsg = () => {
+    history.push('/msg');
+  };
 
   return (
     <div>
       <span>user</span>
-      <Button>User</Button>
+      <Button onClick={toMsg}>to msg</Button>
     </div>
-  )
-}
-User.wrappers = ['@/wrappers/auth']
+  );
+};
 
-export default User
-
-// const User = () => {
-//   return (
-//     <div>user</div>
-//   )
-// }
-
-// export default User;
+export default User;

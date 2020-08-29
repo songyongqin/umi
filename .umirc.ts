@@ -4,10 +4,11 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
-  layout:false,
+  // layout:false,
+
   // mock:false,
   base: '/',
-  publicPath: '/static/',
+  publicPath: '/',
   hash: true,
   history: {
     type: 'hash',
@@ -23,4 +24,3 @@ export default defineConfig({
   //   },
   // },
 });
-
