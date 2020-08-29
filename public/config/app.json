@@ -3,6 +3,6 @@
   "routerHiden": [],
   "adminHiden": [],
   "operatorHiden": [],
-  "commonHiden": ["/config-manage/user"],
+  "commonHiden": ["/user"],
   "globalRoutes": ["/login"]
 }

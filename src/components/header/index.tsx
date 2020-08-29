@@ -12,12 +12,22 @@ const Header = (props: any) => {
     history.push('/login');
   };
 
+  const updateUser = () => {
+    sessionStorage.setItem('test', 'testUpdate');
+  };
+
   return (
     <div className={styles['head']}>
       <div>umi大本营</div>
+      <div>
+        {sessionStorage.getItem('test')
+          ? sessionStorage.getItem('test')
+          : 'test'}
+      </div>
       <div className={styles['content']}>welcome to umi</div>
       <div className={styles['right']}>
         <Button onClick={toLogin}>登出</Button>
+        <Button onClick={updateUser}>修改</Button>
       </div>
     </div>
   );
